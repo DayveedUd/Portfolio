@@ -1095,8 +1095,22 @@
             grid-template-columns: 1fr;
         }
 
+        .hero__copy {
+            min-width: 0;
+            text-align: center;
+        }
+
+        .hero__subtitle {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero__actions {
+            justify-content: center;
+        }
+
         .hero__panel {
-            order: -1;
+            order: 1;
             max-width: 360px;
         }
 
@@ -1252,6 +1266,14 @@
         background-size: 64px 64px;
         mask-image: linear-gradient(90deg, black, transparent 85%);
         -webkit-mask-image: linear-gradient(90deg, black, transparent 85%);
+        }
+
+        @media (max-width: 768px) {
+        .hero__grid {
+            background-size: 44px 44px;
+            mask-image: linear-gradient(90deg, black, transparent 100%);
+            -webkit-mask-image: linear-gradient(90deg, black, transparent 100%);
+        }
         }
 
         .hero__glow {
