@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David | Web Developer</title>
+  <meta name="description" content="David is a full-stack web developer building practical, real-world web applications with HTML, CSS, JavaScript, Node.js, Express and MongoDB.">
+
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- ============================================= -->
+  <!-- NAVIGATION                                     -->
+  <!-- ============================================= -->
+  <header class="nav-wrap">
+    <nav class="nav" id="nav">
+      <a href="#home" class="nav__logo">David<span class="nav__logo-dot">.</span></a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about" class="nav__link" data-nav-link>About</a></li>
+        <li><a href="#projects" class="nav__link" data-nav-link>Projects</a></li>
+        <li><a href="#contact" class="nav__link" data-nav-link>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================= -->
+    <!-- HERO                                           -->
+    <!-- ============================================= -->
+    <section class="hero" id="home">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="hero__inner container">
+        <div class="hero__copy">
+          <p class="hero__kicker">Web Developer</p>
+          <h1 class="hero__title">
+            Hi, I'm <span class="hero__name">David</span>.<br>
+            I build things that <span class="hero__accent">work</span>.
+          </h1>
+          <p class="hero__subtitle">
+           I build functional, full-stack web applications for real-world use. 
+           I work primarily with Node.js, Express, and MongoDB, bridging robust backend logic with clean, responsive frontends.
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary" data-scroll>View My Projects</a>
+            <a href="#contact" class="btn btn--ghost" data-scroll>Contact Me</a>
+          </div>
+        </div>
+
+        <div class="hero__panel" aria-hidden="true">
+          <div class="terminal">
+            <div class="terminal__bar">
+              <span class="terminal__dot"></span>
+              <span class="terminal__dot"></span>
+              <span class="terminal__dot"></span>
+              <span class="terminal__title">david@dev — status</span>
+            </div>
+            <div class="terminal__body">
+              <p class="terminal__line terminal__prompt">const</p>
+              <p class="terminal__line terminal__output" id="typedOutput"></p>
+              <span class="terminal__cursor" id="typedCursor">&#9608;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- ABOUT                                          -->
+    <!-- ============================================= -->
+    <section class="about" id="about" data-reveal>
+      <div class="container about__grid">
+        <div class="about__content">
+          <p class="section-kicker">About</p>
+          <h2 class="section-title">A bit about how I got here.</h2>
+          <p class="about__bio">
+            I'm a web developer with a background in Chemical Engineering and a
+            growing focus on building for the web. I like taking a messy,
+            real-world requirement and shaping it into something people can actually
+            use without thinking about it. Most of what I build runs on a
+            straightforward stack: vanilla front ends, Node and Express on the
+            back, MongoDB for data. I'm still learning, and I like it that way.
+          </p>
+
+          <div class="about__skills">
+            <h3 class="about__skills-title">Skills</h3>
+            <!--
+              Add or remove skills by editing this list. Each <li> is one skill badge.
+            -->
+            <ul class="skills-list" id="skillsList">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>MongoDB</li>
+              <li>Git &amp; GitHub</li>
+              <li>Responsive Design</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="about__media">
+          <div class="phone" role="img" aria-label="Mobile preview of the Hallows Estate project">
+            <div class="phone__bezel">
+              <div class="phone__speaker" aria-hidden="true"></div>
+              <div class="phone__screen">
+                <img src="images/hallows estate responsive.jpeg" alt="Hallows Estate responsive landing page preview">
+
+                <!-- Subtle glass reflection so the screen reads as photographed, not pasted -->
+                <div class="phone__glare" aria-hidden="true"></div>
+
+                <div class="phone__screen-shade" aria-hidden="true"></div>
+                <div class="phone__home-indicator" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- PROJECTS                                       -->
+    <!-- ============================================= -->
+    <section class="projects" id="projects" data-reveal>
+      <div class="container">
+        <p class="section-kicker">Projects</p>
+        <h2 class="section-title">Things I've built.</h2>
+
+        <div class="project-grid" id="projectGrid">
+          <!-- Project cards are generated by JavaScript from the `projects` array. -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- CONTACT                                        -->
+    <!-- ============================================= -->
+    <section class="contact" id="contact" data-reveal>
+      <div class="container contact__grid">
+
+        <div class="contact__intro">
+          <p class="section-kicker">Contact</p>
+          <h2 class="section-title">Have a project in mind?<br>Let's talk.</h2>
+          <p class="contact__lead">
+            I'm open to freelance work, collaborations, and anything that
+            needs a working web application at the end of it.
+          </p>
+
+          <ul class="contact__links" id="contactLinks">
+            <li>
+              <a href="mailto:your@email.com" id="contactEmail" aria-label="Email David">
+                <svg class="contact__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path fill="currentColor" d="M2.25 5.25A2.25 2.25 0 0 1 4.5 3h15a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 19.5 21h-15a2.25 2.25 0 0 1-2.25-2.25V5.25Zm2.25 0v.51l7.5 5.63 7.5-5.63v-.51h-15Zm15 3.32-6.82 5.12a1.13 1.13 0 0 1-1.36 0L4.5 8.57v10.18h15V8.57Z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" id="contactGithub" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg class="contact__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path fill="currentColor" d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.84 1.23 1.84 1.23 1.07 1.83 2.8 1.3 3.49.99.11-.77.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.62-2.8 5.65-5.48 5.95.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" id="contactLinkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg class="contact__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path fill="currentColor" d="M5.1 3.5A2.4 2.4 0 1 1 .3 3.5a2.4 2.4 0 0 1 4.8 0ZM.6 8.1h4.5V23H.6V8.1ZM7.9 8.1h4.3v2h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V23h-4.5v-7.4c0-1.77-.03-4.04-2.46-4.04-2.46 0-2.84 1.92-2.84 3.91V23H7.9V8.1Z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/2349021107608" id="contactWhatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+                <svg class="contact__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path fill="currentColor" d="M12.04 2a9.94 9.94 0 0 0-8.56 15.02L2 22l5.13-1.34A9.95 9.95 0 1 0 12.04 2Zm0 18.05a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.05.8.82-2.97-.2-.31a8.1 8.1 0 1 1 6.86 3.79Zm4.45-6.08c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.01-.37.1-.49.1-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact__laptop" role="img" aria-label="Laptop displaying lines of code">
+          <svg class="contact__laptop-art" viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="laptopScreen" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#252b31"/>
+                <stop offset="1" stop-color="#111417"/>
+              </linearGradient>
+            </defs>
+            <rect x="82" y="30" width="396" height="256" rx="14" fill="#262b31" stroke="var(--border)" stroke-width="3"/>
+            <rect x="101" y="49" width="358" height="218" rx="7" fill="url(#laptopScreen)"/>
+            <circle cx="121" cy="70" r="5" fill="#e2685a"/>
+            <circle cx="139" cy="70" r="5" fill="#e8a33d"/>
+            <circle cx="157" cy="70" r="5" fill="#6fbf8b"/>
+            <g class="contact__code-lines" font-family="var(--font-mono)" font-size="15">
+              <text x="122" y="107" fill="#8b939c">const</text>
+              <text x="174" y="107" fill="#e8a33d">developer</text>
+              <text x="260" y="107" fill="#edeae3">= {</text>
+              <text x="139" y="133" fill="#6fbf8b">name:</text>
+              <text x="194" y="133" fill="#edeae3">"David",</text>
+              <text x="139" y="159" fill="#6fbf8b">builds:</text>
+              <text x="204" y="159" fill="#edeae3">"...",</text>
+              <text x="139" y="185" fill="#6fbf8b">stack:</text>
+              <text x="196" y="185" fill="#edeae3">["HTML", "JS"]</text>
+              <text x="122" y="211" fill="#e8a33d">};</text>
+              <rect x="122" y="231" width="8" height="16" fill="var(--accent)" class="contact__code-cursor"/>
+            </g>
+            <path d="M47 292h466l-26 33H73l-26-33Z" fill="#343b42" stroke="var(--border)" stroke-width="3"/>
+            <path d="M238 299h84l9 13h-102l9-13Z" fill="#1b1f24"/>
+          </svg>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================= -->
+  <!-- PROJECT MODAL                                  -->
+  <!-- ============================================= -->
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal__backdrop" id="modalBackdrop"></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" id="modalClose" aria-label="Close dialog">&times;</button>
+
+      <div class="modal__media" id="modalMedia"></div>
+
+      <div class="modal__body">
+        <h3 class="modal__title" id="modalTitle"></h3>
+        <p class="modal__description" id="modalDescription"></p>
+
+        <div class="modal__tech" id="modalTech"></div>
+
+        <p class="modal__note" id="modalNote"></p>
+
+        <div class="modal__actions">
+          <a href="#" class="btn btn--primary" id="modalLive" target="_blank" rel="noopener">View Project</a>
+          <a href="#" class="btn btn--ghost" id="modalCode" target="_blank" rel="noopener">View Code</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- FOOTER                                         -->
+  <!-- ============================================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2026 David. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
