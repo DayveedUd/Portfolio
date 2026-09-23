@@ -277,13 +277,18 @@ code {
   align-items: center;
 }
 
+.hero__copy,
+.hero__panel {
+  min-width: 0;
+}
+
 .hero__kicker {
   margin-bottom: 22px;
 }
 
 .hero__title {
   max-width: 10ch;
-  font: 600 clamp(5.8rem, 8vw, 4.3rem) / 0.88 var(--font-display);
+  font: 600 clamp(3.8rem, 8vw, 7.6rem) / 0.88 var(--font-display);
 }
 
 .hero__accent {
@@ -807,6 +812,7 @@ code {
 
   .hero__panel {
     max-width: 500px;
+    margin: 0 auto;
   }
 
   .about__grid {
@@ -816,10 +822,12 @@ code {
 
   .about__media {
     order: 0;
+    display: flex;
+    justify-content: center;
   }
 
   .phone {
-    margin: 0;
+    margin: 0 auto;
     width: min(100%, 220px);
   }
 }
@@ -873,7 +881,7 @@ code {
   }
 
   .hero__title {
-    font-size: clamp(3.45rem, 16vw, 5.5rem);
+    font-size: clamp(3.45rem, 16vw, 3.5rem);
   }
 
   .about,
