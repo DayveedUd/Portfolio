@@ -238,8 +238,8 @@ function initTerminalTyping() {
   if (!output) return;
 
   const lines = [
-    `${portfolioData.name} — web developer.`,
-    "Builds real-world web apps.",
+    "Available for focused builds.",
+    "Full-stack web applications.",
     "HTML · CSS · JS · Node · MongoDB.",
   ];
 
